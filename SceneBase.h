@@ -1,17 +1,15 @@
 #pragma once
+// デフォルトの抽象シーンクラス
+// ユーザーはこれを継承してシーンを実装すると楽
 
-class SceneBase
-{
-private:
-
+class SceneBase {
 public:
-	SceneBase() {};
-	~SceneBase() {};
-	
-	/*純粋仮想関数 Update
-	  virtual が 仮想関数 である = 0 が純粋であることを意味します*/
-	virtual void Update() = 0;
+    // デストラクタ
+    virtual ~SceneBase() {}
 
-	virtual void Draw()const = 0;
+    // 更新処理を実装する
+    virtual SceneBase* Update() = 0;
+
+    // 描画処理を実装する
+    virtual void Draw() const = 0;
 };
-

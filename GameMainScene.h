@@ -18,7 +18,7 @@ public:
 	//弾/プレイヤー/敵の当たり判定のチェックを行う
 	void HitCheck();
 
-	void Update() override;
+	SceneBase* Update() override;
 
 	void Draw()const override;
 
