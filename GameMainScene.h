@@ -1,5 +1,6 @@
 #pragma once
 #include "SceneBase.h"
+#include "Player.h"
 
 class GameMainScene : public SceneBase
 {
@@ -24,4 +25,7 @@ public:
 
 	//弾の配列に新しくデータを作成する
 	void SpawnBullet();
+
+	PLAYER* Player;
+
 };

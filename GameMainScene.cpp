@@ -3,21 +3,27 @@
 
 GameMainScene::GameMainScene()
 {
-
+	Player = new PLAYER();
 }
 
 GameMainScene::~GameMainScene()
 {
-
+	delete Player;
 }
 
 SceneBase* GameMainScene::Update()
 {
+	//‚±‚±‚Ìthis‚ÍGameMain‚¾‚¯‚ð•Ô‚µ‚½‚¢
+	Player->Update(this);
+
+	//‚±‚±‚Ìthis‚ÍGameMain‚ðScene‚Æ‚µ‚Ä•Ô‚µ‚½‚¢
 	return this;
 }
 
 void GameMainScene::Draw()const
 {
+	Player->Draw();
+
 	DrawFormatString(0, 40, GetColor(255, 0, 0), "GameMain");
 }
 

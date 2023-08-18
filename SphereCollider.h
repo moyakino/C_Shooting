@@ -3,8 +3,9 @@
 //(当たり判定用のクラス)
 class SphereCollider
 {
-private:
-	float	location;		//(中心座標)
+protected:
+	float	locationX;		//X座標
+	float	locationY;		//Y座標
 	int		radius;			//半径
 
 public:

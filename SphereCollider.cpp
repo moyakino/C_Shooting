@@ -2,7 +2,8 @@
 
 SphereCollider::SphereCollider()
 {
-
+	locationX = 0;
+	locationY = 0;
 }
 
 SphereCollider::~SphereCollider()
