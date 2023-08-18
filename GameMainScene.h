@@ -12,8 +12,8 @@ private:
 	int* bullets[1];
 
 public:
-	GameMainScene() {};
-	~GameMainScene() {};
+	GameMainScene();
+	~GameMainScene();
 
 	//弾/プレイヤー/敵の当たり判定のチェックを行う
 	void HitCheck();

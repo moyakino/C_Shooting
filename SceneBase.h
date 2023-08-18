@@ -5,7 +5,7 @@
 class SceneBase {
 public:
     // デストラクタ
-    virtual ~SceneBase() {}
+    virtual ~SceneBase() {};
 
     // 更新処理を実装する
     virtual SceneBase* Update() = 0;

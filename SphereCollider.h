@@ -8,8 +8,8 @@ private:
 	int		radius;			//”¼Œa
 
 public:
-	SphereCollider() {};
-	~SphereCollider() {};
+	SphereCollider();
+	~SphereCollider();
 
 	//ˆø”‚ÅSphereCollider‚ğó‚¯æ‚éSphereCollider“¯m‚Ì“–‚½‚è”»’è‚ğs‚¢“–‚½‚Á‚½‚©‚Ç‚¤‚©‚ğ•Ô‚·
 	int CheckCollision(SphereCollider* collision);

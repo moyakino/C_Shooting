@@ -8,8 +8,8 @@ private:
 	//int* weapon (BulletsSpawnerƒ|ƒCƒ“ƒ^Œ^)
 
 public:
-	Player() {};
-	~Player() {};
+	Player();
+	~Player();
 
 	void Update(GameMainScene* GameMain) override;
 

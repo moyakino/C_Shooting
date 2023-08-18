@@ -4,9 +4,9 @@
 #include "SceneManager.h"
 #include "Title.h"
 
-#define SCREEN_BIT_32 32
-#define SCREEN_HEIGHT 720
-#define SCREEN_WIDHT 1280
+#define SCREEN_BIT_32 32	//解像度
+#define SCREEN_HEIGHT 720	//画面の高さ
+#define SCREEN_WIDHT 1280	//画面の幅
 
 int WINAPI WinMain(_In_ HINSTANCE ih, _In_opt_ HINSTANCE ioh, _In_ LPSTR il, _In_ int ii)
 {
@@ -21,6 +21,8 @@ int WINAPI WinMain(_In_ HINSTANCE ih, _In_opt_ HINSTANCE ioh, _In_ LPSTR il, _In
 	{
 		return -1;
 	}
+
+	//SetWindowSize(SCREEN_WIDHT, SCREEN_HEIGHT);
 
 	// DXライブラリの初期化
 	if (DxLib_Init() == -1)
@@ -40,9 +42,7 @@ int WINAPI WinMain(_In_ HINSTANCE ih, _In_opt_ HINSTANCE ioh, _In_ LPSTR il, _In
 
 		PAD_INPUT::UpdateKey();
 
-		sceneMng.Draw();//シーン描画
-
-		sceneMng.Update();
+		sceneMng.Draw();
 
 		//強制終了
 		if (PAD_INPUT::OnButton(XINPUT_BUTTON_BACK))

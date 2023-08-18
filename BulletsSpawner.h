@@ -11,8 +11,8 @@ private:
 	float angulVelocity;	//角度の変化量
 
 public:
-	BulletsSpawner() {};
-	~BulletsSpawner() {};
+	BulletsSpawner();
+	~BulletsSpawner();
 
 	//引数にゲームメインシーンのポインタを受け取るSpawnBulletで弾を生成する
 	virtual void Shoot(GameMainScene* GameMain);

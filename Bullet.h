@@ -11,8 +11,8 @@ private:
 	float angulVelocity;	//Šp“x‚Ì•Ï‰»—Ê
 
 public:
-	Bullet() {};
-	~Bullet() {};
+	Bullet();
+	~Bullet();
 
 	void Update();
 

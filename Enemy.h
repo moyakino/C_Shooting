@@ -11,8 +11,8 @@ private:
 	//int* weapon (BulletsSpawnerƒ|ƒCƒ“ƒ^Œ^)
 
 public:
-	Enemy() {};
-	~Enemy() {};
+	Enemy();
+	~Enemy();
 
 	void Update(GameMainScene* GameMain) override;
 

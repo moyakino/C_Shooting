@@ -1,6 +1,7 @@
 #pragma once
+class GameMainScene;
 #include "SphereCollider.h"
-#include "GameMainScene.h"
+
 
 class CharaBase : public SphereCollider
 {
@@ -9,8 +10,8 @@ private:
 	int		image;
 
 public:
-	CharaBase() {};
-	~CharaBase() {};
+	CharaBase();
+	~CharaBase();
 
 	//引数にゲームメインシーンのポインタを受け取る
 	virtual void Update(GameMainScene* GameMain);

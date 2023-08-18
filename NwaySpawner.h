@@ -10,8 +10,8 @@ private:
 
 
 public:
-	NwaySpawner() {};
-	~NwaySpawner() {};
+	NwaySpawner();
+	~NwaySpawner();
 
 	void Shoot(GameMainScene* GameMain) override;
 };
