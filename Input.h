@@ -19,6 +19,7 @@ private:
 	static XINPUT_STATE input; //パッド
 	static Stick r_stick; //右スティック
 	static Stick l_stick; //左スティック
+
 private:
 
 	//コンストラクタ
@@ -79,23 +80,6 @@ public:
 	static Stick GetLStick()
 	{
 		return l_stick;
-	}
-
-	//(仮)スティックが倒されているかの判定を取る
-	static short int GetStickOn()
-	{
-		int ret = 0;
-		if (l_stick.x == 128 || l_stick.x > 128 && l_stick.x < 2000 || l_stick.x < 128 && l_stick.x > -2000) {
-			ret = FALSE;
-		}
-		else if (l_stick.x > 2000 && l_stick.x > 128) {
-			ret = TRUE;
-		}
-		else if (-2000 > l_stick.x && l_stick.x < 128) {
-			ret = TRUE;
-		}
-
-		return ret;
 	}
 
 	//左スティックの取得 横軸値

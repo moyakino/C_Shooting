@@ -1,19 +1,25 @@
 #pragma once
 #include "CharaBase.h"
+#include "BulletsSpawner.h"
 
 //スティックの傾き具合からプレイヤーの状態を取得
 #define LEFT_MOVE -2000
 #define RIGHT_MOVE 2000
+#define UP_MOVE 2000
+#define DOWN_MOVE -2000
 
 class PLAYER : public CharaBase
 {
 private:
-	int FPSCnt;
-	int Stick;
-	int score;
-	//int* weapon (BulletsSpawnerポインタ型)
+	
+	int StickX, StickY;
+	int A_Btn, B_Btn;
+	int Xspeed, Yspeed;
 
 public:
+	static float PlayerX, PlayerY;
+	static bool ShootON;
+
 	PLAYER();
 	~PLAYER();
 
@@ -23,4 +29,10 @@ public:
 
 	void Hit(int damage) override;
 
+	void PlayerMove();
+
+	static bool GetShootON() { return ShootON; }
+
+	float GetPlayerX() { return PlayerX; }
+	float GetPlayerY() { return PlayerY; }
 };

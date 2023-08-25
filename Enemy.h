@@ -8,6 +8,7 @@ class Enemy : public CharaBase
 private:
 	int hp;			//敵の体力
 	int point;		//(スコアの加算量)
+	float EnemyX, EnemyY, EnemyRadius;
 	//int* weapon (BulletsSpawnerポインタ型)
 
 public:

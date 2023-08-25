@@ -2,8 +2,9 @@
 
 SphereCollider::SphereCollider()
 {
-	locationX = 0;
-	locationY = 0;
+	locationX = 0.0f;
+	locationY = 0.0f;
+	radius = 0;
 }
 
 SphereCollider::~SphereCollider()
