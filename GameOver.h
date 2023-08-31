@@ -1,19 +1,18 @@
 #pragma once
 #include "SceneBase.h"
 
-class Title : public SceneBase
+class GameOver : public SceneBase
 {
 private:
-	int g_MenuNumber;	//メニューフラグ
-	int g_MenuY;		//メニューカーソル用
+
 
 public:
 
 	//コンストラクタ
-	Title();
+	GameOver();
 
 	//デストラクタ
-	~Title();
+	~GameOver();
 
 	//描画以外の更新を実装する
 	SceneBase* Update();

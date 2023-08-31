@@ -8,22 +8,29 @@ class Bullet : public SphereCollider
 private:
 	float	BulletX;
 	float	BulletY;
+	float	Radius;
+	int		Damage;
 	float	speed;				//‘¬“x
 	float	angle;				//Šp“x
 	float	acceleration;		//‘¬“x‚Ì•Ï‰»—Ê
 	float	angulVelocity;		//Šp“x‚Ì•Ï‰»—Ê
+	bool	BulletShootFlg;
+	bool	BulletHitFlg;
+	bool	BulletDrawFlg;
 
 public:
 
-	Bullet(float x, float y);
+	Bullet();
 	~Bullet();
 
-	void Update();
+	void Update(float x, float y, float Speed);
 
 	void Draw()const;
 
-	void GetSpeed(const float speed) { this->speed = speed; }
-	void GetAngle(const float angle) { this->angle = angle; }
-	void GetAcceleration(const float acceleration) { this->acceleration = acceleration; }
-	void GetAngulVelocity(const float angulVelocity) { this->angulVelocity = angulVelocity; }
+	int SetDrawFlg(int Flg);
+
+	float GetBulletX()		{ return BulletX; }
+	float GetBulletY()		{ return BulletY; }
+	float GetBulletRadius() { return Radius; }
+	int	GetBulletDamage()	{ return Damage; }
 };

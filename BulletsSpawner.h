@@ -5,10 +5,11 @@ class GameMainScene;
 class BulletsSpawner
 {
 private:
-	float	speed;				//速度
 	float	angle;				//角度
 	float	acceleration;		//速度の変化量
 	float	angulVelocity;		//角度の変化量
+	float	speed;				//速度
+	float   Enemyspeed;
 
 public:
 
@@ -17,4 +18,7 @@ public:
 
 	//引数にゲームメインシーンのポインタを受け取るSpawnBulletで弾にSpeed等の要素を受け渡す
 	virtual void Shoot(GameMainScene* GameMain);
+
+	float GetBulletSpeed() { return speed; }
+	float GetEnemySpeed() { return Enemyspeed; }
 };

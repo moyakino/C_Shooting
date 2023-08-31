@@ -2,7 +2,7 @@
 #include "FPS.h"
 #include "Input.h"
 #include "SceneManager.h"
-#include "GameMainScene.h"
+#include "Title.h"
 
 #define SCREEN_BIT_32 32	//解像度
 #define SCREEN_HEIGHT 720	//画面の高さ
@@ -32,7 +32,7 @@ int WINAPI WinMain(_In_ HINSTANCE ih, _In_opt_ HINSTANCE ioh, _In_ LPSTR il, _In
 
 	SetDrawScreen(DX_SCREEN_BACK);	// 描画先画面を裏にする
 
-	SceneManager sceneMng(dynamic_cast<SceneBase*>(new GameMainScene()));
+	SceneManager sceneMng(dynamic_cast<SceneBase*>(new Title()));
 	Fps fps;
 
 	//ゲームループ
@@ -58,7 +58,7 @@ int WINAPI WinMain(_In_ HINSTANCE ih, _In_opt_ HINSTANCE ioh, _In_ LPSTR il, _In
 
 		fps.Update();	//FPS計測
 
-		fps.Draw();		//FPS描画
+		//fps.Draw();		//FPS描画
 
 		fps.Wait();		//FPS同期
 

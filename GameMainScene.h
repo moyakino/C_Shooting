@@ -5,6 +5,9 @@
 #include "Player.h"
 #include "Enemy.h"
 #include "Bullet.h"
+#include "BulletsSpawner.h"
+#include "GameClear.h"
+#include "GameOver.h"
 
 struct SHOT
 {
@@ -16,15 +19,7 @@ class GameMainScene : public SceneBase
 private:
 	int player;
 	int life;
-	int BulletNow;
-	int FPSCnt;
-	int Rnd;
-	//void* Test = bullets[100];
-	bool SpawnFlg;
-
-	//(仮) ポインタ配列
-	Enemy* enemy[100];
-	Bullet* bullets[100];
+	int Hit;
 
 	//Bullet* BULLET = new Bullet[BULLETMAX];
 
@@ -43,7 +38,12 @@ public:
 	void SpawnBullet();
 
 	PLAYER* Player;
-	//Bullet* bullet;
+	Bullet* bullet;
 	Enemy* ENEMY;
 	BulletsSpawner* Spawner;
+	GameClear* Clear;
+	GameOver* Over;
+	//(仮) ポインタ配列
+	Enemy* enemy[100];
+	Bullet* bullets[100];
 };

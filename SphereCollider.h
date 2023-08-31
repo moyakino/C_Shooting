@@ -15,4 +15,10 @@ public:
 
 	//ˆø”‚ÅSphereCollider‚ğó‚¯æ‚éSphereCollider“¯m‚Ì“–‚½‚è”»’è‚ğs‚¢“–‚½‚Á‚½‚©‚Ç‚¤‚©‚ğ•Ô‚·
 	//int CheckCollision(SphereCollider* collision);
+
+	bool CollisionHit(float px, float py, float pr, float ex, float ey, float er);
+
+	float GetLocationX() { return locationX; }
+	float GetLocationY() { return locationY; }
+	int	  GetRadius()	 { return radius; }
 };

@@ -1,6 +1,6 @@
 #pragma once
 #include "CharaBase.h"
-#include "BulletsSpawner.h"
+#include "Bullet.h"
 
 //スティックの傾き具合からプレイヤーの状態を取得
 #define LEFT_MOVE -2000
@@ -17,7 +17,6 @@ private:
 	int Xspeed, Yspeed;
 
 public:
-	static float PlayerX, PlayerY;
 	static bool ShootON;
 
 	PLAYER();
@@ -31,8 +30,5 @@ public:
 
 	void PlayerMove();
 
-	static bool GetShootON() { return ShootON; }
-
-	float GetPlayerX() { return PlayerX; }
-	float GetPlayerY() { return PlayerY; }
+	static bool GetShootON() { return ShootON; }	//Aボタンが押されたか？
 };

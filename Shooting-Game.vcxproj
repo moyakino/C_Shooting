@@ -142,8 +142,10 @@
     <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="BulletsSpawner.cpp" />
     <ClCompile Include="CharaBase.cpp" />
+    <ClCompile Include="GameClear.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="GameMainScene.cpp" />
+    <ClCompile Include="GameOver.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="NwaySpawner.cpp" />
@@ -156,9 +158,11 @@
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="BulletsSpawner.h" />
     <ClInclude Include="CharaBase.h" />
+    <ClInclude Include="GameClear.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="FPS.h" />
     <ClInclude Include="GameMainScene.h" />
+    <ClInclude Include="GameOver.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="NwaySpawner.h" />
     <ClInclude Include="Player.h" />

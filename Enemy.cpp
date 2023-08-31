@@ -3,7 +3,9 @@
 
 Enemy::Enemy()
 {
-	EnemyX = 800.0f, EnemyY =400.0f, EnemyRadius = 20;
+	locationX = 800.0f, locationY = 400.0f, radius = 60;
+	hp = 100;
+	EnemyDrawFlg = false;
 }
 
 Enemy::~Enemy()
@@ -13,16 +15,24 @@ Enemy::~Enemy()
 
 void Enemy::Update(GameMainScene* GameMain)
 {
-
+	if (hp > 0) {
+		EnemyDrawFlg = true;
+	}
+	else {
+		EnemyDrawFlg = false;
+	}
 }
 
 void Enemy::Draw()const
 {
 	//“G‚ð•\Ž¦
-	DrawCircle(EnemyX, EnemyY, 20, 0xffffff, TRUE);
+	if (EnemyDrawFlg == true) {
+		DrawCircle(locationX, locationY, radius, 0xffffff, TRUE);
+		DrawFormatString(locationX - 35, locationY - 20, GetColor(255, 0, 0), "%d", hp);
+	}
 }
 
 void Enemy::Hit(int damage)
 {
-
+	hp = hp - damage;
 }
